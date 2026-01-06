@@ -28,10 +28,10 @@ const services = [
 
 export function HomeServices() {
     return (
-        <section className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/50">
+        <section className="py-20 md:py-32 bg-slate-50">
             <Container>
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50 md:text-4xl">
+                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
                         Nuestros Sectores de Acción
                     </h2>
                     <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">

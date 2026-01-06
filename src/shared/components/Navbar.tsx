@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Container } from "@/shared/components/Container";
 import { Button } from "@/shared/components/Button";
 import { cn } from "@/shared/lib/utils";
@@ -23,15 +24,18 @@ export function Navbar() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
+        <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
             <Container>
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <Leaf className="h-8 w-8 text-primary" />
-                        <span className="text-xl font-bold text-foreground">
-                            EME Consultorías
-                        </span>
+                        <Image
+                            src="/Logo E.M.E..png"
+                            alt="EME Consultorías Logo"
+                            width={200}
+                            height={10}
+                            className=" w-[150px] object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

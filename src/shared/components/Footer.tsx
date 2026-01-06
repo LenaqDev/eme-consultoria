@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Leaf, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/shared/components/Container";
 
 export function Footer() {
@@ -9,10 +10,13 @@ export function Footer() {
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
                     <div className="md:col-span-2">
                         <Link href="/" className="flex items-center space-x-2 mb-4">
-                            <Leaf className="h-6 w-6 text-primary" />
-                            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-700">
-                                EME Consultorías
-                            </span>
+                            <Image
+                                src="/Logo-E.M.E.blanco.png"
+                                alt="EME Consultorías Logo"
+                                width={150}
+                                height={150}
+                                className="w-[150px] object-contain"
+                            />  
                         </Link>
                         <p className="text-sm text-slate-500 max-w-xs mb-6 dark:text-slate-400">
                             Transformando territorios a través de la formulación, diseño y ejecución de proyectos sostenibles en energía, medio ambiente y educación.
