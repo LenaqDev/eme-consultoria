@@ -37,7 +37,7 @@ export function BlogPage() {
         <div className="py-20 bg-background">
             <Container>
                 <div className="mb-16">
-                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-slate-900 dark:text-slate-50">Blog y Noticias</h1>
+                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Blog y Noticias</h1>
                     <p className="text-lg text-slate-600 dark:text-slate-400">
                         Actualidad, reflexiones y novedades sobre nuestros proyectos y el sector.
                     </p>
@@ -45,7 +45,7 @@ export function BlogPage() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {posts.map((post) => (
-                        <article key={post.id} className="flex flex-col bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow">
+                        <article key={post.id} className="flex flex-col bg-white  rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-48 bg-slate-200 dark:bg-slate-700 w-full animate-pulse" /> {/* Placeholder for blog image */}
                             <div className="p-6 flex-1 flex flex-col">
                                 <div className="flex items-center gap-4 text-xs text-slate-500 mb-3">

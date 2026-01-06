@@ -25,20 +25,20 @@ export function HomeHero() {
                     className="mx-auto max-w-4xl"
                 >
                     <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl drop-shadow-lg">
-                        Transformando el Futuro con <span className="text-primary  text-emerald-400">Desarrollo Sostenible</span>
+                        Transformando el Futuro con <span className="text-primary">Desarrollo Sostenible</span>
                     </h1>
                     <p className="mb-8 text-lg font-medium text-slate-100 md:text-xl drop-shadow-md max-w-2xl mx-auto">
                         EME Consultorías y Asesorías: Expertos en formulación, diseño y ejecución de proyectos de energía, medio ambiente y educación.
                     </p>
                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white border-0" asChild>
-                            <Link href="/services">
+                    <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white border-0" asChild>
+                    <Link href="/#services">
                                 Nuestros Servicios
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </Button>
                         <Button size="lg" variant="outline" className="bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border-white/30" asChild>
-                            <Link href="/contact">
+                            <Link href="/#contact">
                                 Contáctanos
                             </Link>
                         </Button>

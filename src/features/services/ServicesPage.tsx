@@ -48,7 +48,7 @@ export function ServicesPage() {
         <div className="py-20 bg-background">
             <Container>
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-slate-900 dark:text-slate-50">Nuestros Servicios</h1>
+                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Nuestros Servicios</h1>
                     <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                         Soluciones especializadas adaptadas a las necesidades de cada territorio y cliente.
                     </p>
@@ -65,7 +65,7 @@ export function ServicesPage() {
                             className={`rounded-2xl p-8 border border-slate-100 shadow-sm ${cat.bg} dark:border-slate-800`}
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className={`p-3 rounded-xl bg-white dark:bg-slate-800 shadow-sm`}>
+                                <div className={`p-3 rounded-xl bg-white  shadow-sm`}>
                                     <cat.icon className={`h-8 w-8 ${cat.color}`} />
                                 </div>
                                 <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50">{cat.title}</h2>

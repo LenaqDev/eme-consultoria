@@ -32,7 +32,7 @@ export function BlogPostPage() {
                     </p>
                 </header>
 
-                <div className="h-[400px] bg-slate-200 dark:bg-slate-800 rounded-2xl mb-12 w-full" />
+                <div className="h-[400px] bg-slate-200  rounded-2xl mb-12 w-full" />
 
                 <div className="prose prose-lg dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
                     <p>

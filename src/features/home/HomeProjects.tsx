@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { Container } from "@/shared/components/Container";
+import { Button } from "@/shared/components/Button";
 import { motion } from "framer-motion";
 
-export function GalleryPage() {
+export function HomeProjects() {
     const projects = [
         { id: 1, title: "Planta Solar Cauca", category: "Energía", color: "bg-amber-200" },
         { id: 2, title: "Reforestación Meta", category: "Medio Ambiente", color: "bg-emerald-200" },
@@ -17,8 +19,8 @@ export function GalleryPage() {
         <div className="py-20 bg-background">
             <Container>
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Nuestros Proyectos</h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    <h2 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Proyectos Destacados</h2>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         Una muestra de nuestro trabajo transformando realidades en todo el territorio nacional.
                     </p>
                 </div>
@@ -31,7 +33,7 @@ export function GalleryPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer"
+                            className="group relative aspect-4/3 overflow-hidden rounded-xl cursor-pointer"
                         >
                             <div className={`absolute inset-0 ${project.color} opacity-80 group-hover:scale-105 transition-transform duration-500`} />
 
@@ -43,6 +45,12 @@ export function GalleryPage() {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <Button asChild size="lg">
+                        <Link href="/projects">Ver Todos los Proyectos</Link>
+                    </Button>
                 </div>
             </Container>
         </div>

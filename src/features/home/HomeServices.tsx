@@ -31,10 +31,10 @@ export function HomeServices() {
         <section className="py-20 md:py-32 bg-slate-50">
             <Container>
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                    <h2 className="text-3xl font-bold tracking-tight text-secondary md:text-4xl">
                         Nuestros Sectores de Acción
                     </h2>
-                    <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
                         Abordamos desafíos complejos con soluciones integrales en áreas clave para el desarrollo.
                     </p>
                 </div>
@@ -47,15 +47,15 @@ export function HomeServices() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl dark:bg-slate-800"
+                            className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl "
                         >
                             <div className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl ${service.color}`}>
                                 <service.icon className="h-7 w-7" />
                             </div>
-                            <h3 className="mb-3 text-xl font-bold text-slate-900 dark:text-slate-50">
+                            <h3 className="mb-3 text-xl font-bold text-slate-900">
                                 {service.title}
                             </h3>
-                            <p className="mb-6 text-slate-600 dark:text-slate-400">
+                            <p className="mb-6 text-slate-600">
                                 {service.description}
                             </p>
                             <Link

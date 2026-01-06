@@ -7,11 +7,11 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export function ContactPage() {
     return (
-        <div className="py-20 bg-slate-50 dark:bg-slate-900/50">
+        <div className="py-20 bg-slate-50">
             <Container>
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-slate-900 dark:text-slate-50">Contáctanos</h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Contáctanos</h1>
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                         Estamos listos para escuchar tus necesidades y desarrollar proyectos juntos.
                     </p>
                 </div>
@@ -23,8 +23,8 @@ export function ContactPage() {
                         animate={{ opacity: 1, x: 0 }}
                         className="space-y-8 md:col-span-1"
                     >
-                        <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm">
-                            <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-slate-50">Información</h3>
+                        <div className="bg-white  p-6 rounded-2xl shadow-sm">
+                            <h3 className="text-xl font-bold mb-6 text-slate-900">Información</h3>
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
@@ -32,8 +32,8 @@ export function ContactPage() {
                                         <MapPin className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-900 dark:text-slate-100">Ubicación</h4>
-                                        <p className="text-slate-600 dark:text-slate-400">Bogotá, Colombia</p>
+                                        <h4 className="font-semibold text-slate-900 ">Ubicación</h4>
+                                        <p className="text-slate-600">Bogotá, Colombia</p>
                                         <p className="text-sm text-slate-500">Oficina Principal</p>
                                     </div>
                                 </div>
@@ -43,8 +43,8 @@ export function ContactPage() {
                                         <Mail className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-900 dark:text-slate-100">Email</h4>
-                                        <p className="text-slate-600 dark:text-slate-400">info@emeconsultorias.com</p>
+                                        <h4 className="font-semibold text-slate-900">Email</h4>
+                                        <p className="text-slate-600">info@emeconsultorias.com</p>
                                         <p className="text-sm text-slate-500">Respuesta en 24h</p>
                                     </div>
                                 </div>
@@ -54,8 +54,8 @@ export function ContactPage() {
                                         <Phone className="h-6 w-6" />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-slate-900 dark:text-slate-100">Teléfono</h4>
-                                        <p className="text-slate-600 dark:text-slate-400">+57 601 123 4567</p>
+                                        <h4 className="font-semibold text-slate-900">Teléfono</h4>
+                                        <p className="text-slate-600 ">+57 601 123 4567</p>
                                         <p className="text-sm text-slate-500">Lunes a Viernes, 8am - 5pm</p>
                                     </div>
                                 </div>
@@ -68,13 +68,13 @@ export function ContactPage() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="md:col-span-2 bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm"
+                        className="md:col-span-2 bg-white  p-8 rounded-2xl shadow-sm"
                     >
-                        <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-slate-50">Envíanos un mensaje</h3>
+                        <h3 className="text-2xl font-bold mb-6 text-slate-900">Envíanos un mensaje</h3>
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    <label htmlFor="name" className="text-sm font-medium text-slate-700">
                                         Nombre Completo
                                     </label>
                                     <input
@@ -85,7 +85,7 @@ export function ContactPage() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                    <label htmlFor="email" className="text-sm font-medium text-slate-700 ">
                                         Correo Electrónico
                                     </label>
                                     <input
@@ -98,7 +98,7 @@ export function ContactPage() {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="subject" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                <label htmlFor="subject" className="text-sm font-medium text-slate-700">
                                     Asunto
                                 </label>
                                 <select
@@ -114,7 +114,7 @@ export function ContactPage() {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                                <label htmlFor="message" className="text-sm font-medium text-slate-700">
                                     Mensaje
                                 </label>
                                 <textarea

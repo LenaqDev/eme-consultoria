@@ -10,10 +10,10 @@ import { Button } from "@/shared/components/Button";
 import { cn } from "@/shared/lib/utils";
 
 const navLinks = [
-    { name: "Inicio", href: "/" },
-    { name: "Sobre Nosotros", href: "/about" },
-    { name: "Servicios", href: "/services" },
-    { name: "Galería", href: "/gallery" },
+    { name: "Inicio", href: "/#home" },
+    { name: "Sobre Nosotros", href: "/#about" },
+    { name: "Servicios", href: "/#services" },
+    { name: "Proyectos", href: "/projects" },
     { name: "Blog", href: "/blog" },
 ];
 
@@ -45,17 +45,17 @@ export function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors hover:text-primary",
+                                    "text-sm font-medium transition-colors",
                                     pathname === link.href
-                                        ? "text-primary"
-                                        : "text-muted-foreground"
+                                        ? "text-secondary"
+                                        : "text-secondary"
                                 )}
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <Button asChild size="sm">
-                            <Link href="/contact">Contacto</Link>
+                            <Link href="/#contact">Contacto</Link>
                         </Button>
                     </nav>
 
@@ -90,7 +90,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <Button asChild className="w-full">
-                            <Link href="/contact" onClick={() => setIsOpen(false)}>
+                            <Link href="/#contact" onClick={() => setIsOpen(false)}>
                                 Contacto
                             </Link>
                         </Button>
