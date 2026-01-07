@@ -24,17 +24,17 @@ export function Navbar() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
+        <header className="absolute top-0 z-50 w-full bg-transparent">
             <Container>
-                <div className="flex h-16 items-center justify-between">
+                <div className="flex h-30 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
-                            src="/Logo E.M.E..png"
+                            src="/Logo E.M.E.v2.png"
                             alt="EME Consultorías Logo"
                             width={200}
                             height={10}
-                            className=" w-[150px] object-contain"
+                            className=" w-[180px] object-contain"
                         />
                     </Link>
 
@@ -45,18 +45,21 @@ export function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors",
+                                    "text-sm font-medium transition-colors hover:text-white/80",
                                     pathname === link.href
-                                        ? "text-secondary"
-                                        : "text-secondary"
+                                        ? "text-white font-bold"
+                                        : "text-white"
                                 )}
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <Button asChild size="sm">
-                            <Link href="/#contact">Contacto</Link>
-                        </Button>
+                        <Link
+                            href="/#contact"
+                            className="text-sm font-medium transition-colors text-white hover:text-white/80"
+                        >
+                            Contacto
+                        </Link>
                     </nav>
 
                     {/* Mobile Menu Button */}
