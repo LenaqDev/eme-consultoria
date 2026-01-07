@@ -1,4 +1,5 @@
 import { HomeHero } from "./HomeHero";
+import { HomeExpertise } from "./HomeExpertise";
 import { HomeServices } from "./HomeServices";
 import { HomeProjects } from "./HomeProjects";
 import { AboutPage } from "@/features/about/AboutPage";
@@ -10,6 +11,7 @@ export function HomePage() {
         <>
             <section id="home">
                 <HomeHero />
+                <HomeExpertise />
             </section>
             <section id="about">
                 <AboutPage />
