@@ -19,7 +19,7 @@ export function HomeExpertise() {
                     {/* Second Column: Sostenibilidad Real (New) */}
                     <div className="flex flex-col items-center text-center border-r-0 border-slate-300 px-0 lg:border-r lg:px-8">
                         <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-none text-slate-700">
-                            <Leaf className="h-12 w-12" strokeWidth={1.5} />
+                            <Leaf className="h-12 w-12 text-emerald-600" strokeWidth={1.5} />
                         </div>
                         <h3 className="mb-4 text-xl font-bold text-slate-900">Sostenibilidad Real</h3>
                         <p className="text-sm leading-relaxed text-slate-700">
@@ -30,7 +30,7 @@ export function HomeExpertise() {
                     {/* Third Column: Innovación Social */}
                     <div className="flex flex-col items-center text-center border-r-0 border-slate-300 px-0 lg:border-r lg:px-8">
                         <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-none text-slate-700">
-                            <Lightbulb className="h-12 w-12" strokeWidth={1.5} />
+                            <Lightbulb className="h-12 w-12 text-emerald-600" strokeWidth={1.5} />
                         </div>
                         <h3 className="mb-4 text-xl font-bold text-slate-900">Innovación Social</h3>
                         <p className="text-sm leading-relaxed text-slate-700">
@@ -41,7 +41,7 @@ export function HomeExpertise() {
                     {/* Fourth Column: Respaldo Técnico */}
                     <div className="flex flex-col items-center text-center pl-0 lg:pl-8">
                         <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-none text-slate-700">
-                            <ShieldCheck className="h-12 w-12" strokeWidth={1.5} />
+                            <ShieldCheck className="h-12 w-12 text-emerald-600" strokeWidth={1.5} />
                         </div>
                         <h3 className="mb-4 text-xl font-bold text-slate-900">Respaldo Técnico</h3>
                         <p className="text-sm leading-relaxed text-slate-700">

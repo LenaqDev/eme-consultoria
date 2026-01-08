@@ -5,8 +5,16 @@ import { Container } from "@/shared/components/Container";
 
 export function Footer() {
     return (
-        <footer className="bg-secondary text-secondary-foreground">
-            <Container className="py-12 md:py-16">
+        <footer className="relative bg-secondary text-secondary-foreground overflow-hidden">
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                <Image
+                    src="/images/footer1-bg-shape.png"
+                    alt="Footer Background Shape"
+                    fill
+                    className="object-cover"
+                />
+            </div>
+            <Container className="relative z-10 py-12 md:py-16">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
                     <div className="md:col-span-2">
                         <Link href="/" className="flex items-center space-x-2 mb-4">
@@ -16,7 +24,7 @@ export function Footer() {
                                 width={150}
                                 height={150}
                                 className="w-[150px] object-contain"
-                            />  
+                            />
                         </Link>
                         <p className="text-sm text-secondary-foreground max-w-xs mb-6">
                             Transformando territorios a través de la formulación, diseño y ejecución de proyectos sostenibles en energía, medio ambiente y educación.
