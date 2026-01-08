@@ -28,7 +28,7 @@ export function ContactPage() {
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-emerald-100 rounded-lg text-emerald-600 dark:bg-emerald-900/30">
+                                    <div className="p-3 text-emerald-600">
                                         <MapPin className="h-6 w-6" />
                                     </div>
                                     <div>
@@ -39,7 +39,7 @@ export function ContactPage() {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-blue-100 rounded-lg text-blue-600 dark:bg-blue-900/30">
+                                    <div className="p-3 text-blue-600">
                                         <Mail className="h-6 w-6" />
                                     </div>
                                     <div>
@@ -50,7 +50,7 @@ export function ContactPage() {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-amber-100 rounded-lg text-amber-600 dark:bg-amber-900/30">
+                                    <div className="p-3 text-amber-600">
                                         <Phone className="h-6 w-6" />
                                     </div>
                                     <div>
