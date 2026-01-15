@@ -44,8 +44,7 @@ export function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-slate-900">Email</h4>
-                                        <p className="text-slate-600">info@emeconsultorias.com</p>
-                                        <p className="text-sm text-slate-500">Respuesta en 24h</p>
+                                        <p className="text-slate-600">gerencia@emeconsultorias.com</p>
                                     </div>
                                 </div>
 
@@ -55,8 +54,7 @@ export function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-slate-900">Teléfono</h4>
-                                        <p className="text-slate-600 ">+57 601 123 4567</p>
-                                        <p className="text-sm text-slate-500">Lunes a Viernes, 8am - 5pm</p>
+                                        <p className="text-slate-600 ">+57 3107819640</p>
                                     </div>
                                 </div>
                             </div>

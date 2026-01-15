@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/shared/components/Container";
 
+
 export function Footer() {
     return (
         <footer className="relative bg-secondary text-secondary-foreground overflow-hidden">
@@ -70,8 +71,15 @@ export function Footer() {
                 <div className="mt-12 pt-8 border-t border-border text-center text-sm text-secondary-foreground flex justify-between items-center flex-col md:flex-row">
                     <p>&copy; {new Date().getFullYear()} EME Consultorías y Asesorías S.A.S.</p>
                     <div className="flex gap-4 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-accent transition-colors">
-                            Desarrollado by Lenaq
+                        <a href="https://www.lenaq.com" className="hover:text-accent transition-colors flex items-center gap-2">
+                            <span>Desarrollado by</span>
+                            <Image
+                                src="https://www.lenaq.com/img/logowhite.png"
+                                alt="Lenaq"
+                                width={100}
+                                height={100}
+                                className="w-[50px] object-contain"
+                            />
                         </a>
                     </div>
                 </div>
