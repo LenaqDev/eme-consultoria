@@ -1,0 +1,151 @@
+export interface Project {
+    id: number;
+    location: string;
+    title: string;
+    status: string;
+    progress: string;
+    category?: string;
+    image?: string;
+}
+
+export const projects: Project[] = [
+    {
+        id: 1,
+        location: "Fresno, Tolima",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES COMO MEDIDA DE CONSERVACIÓN AMBIENTAL",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 4,
+        location: "Cauca",
+        title: "SISTEMA INTEGRADO TECNICO EDUCATIVO COMO HERRAMIENTA PARA EL USO Y APROPIACION DE LOS RECURSOS DIDÁCTICOS TIC EN INSTITUCIONES EDUCATIVAS DEL DEPARTAMENTO DEL CAUCA",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Educación",
+        image: "/images/proyectos/educacion.png"
+    },
+
+    {
+        id: 7,
+        location: "Acevedo, Huila",
+        title: "CONSTRUCCIÓN CUBIERTA POLIDEPORTIVO INSTITUCIÓN EDUCATIVA LA VICTORIA SEDE LA UNIÓN",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Infraestructura",
+        image: "/images/proyectos/cubierta2.jpeg"
+    },
+    {
+        id: 5,
+        location: "Chinchiná, Caldas",
+        title: "IMPLEMENTACIÓN DE ACCIONES DE RESTAURACIÓN Y GOBERNANZA AMBIENTAL",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/restauración.jpg"
+    },
+    {
+        id: 3,
+        location: "Algeciras, Huila",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES COMO MEDIDA DE CONSERVACIÓN AMBIENTAL",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 2,
+        location: "Acevedo, Huila",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES COMO MEDIDA DE CONSERVACIÓN AMBIENTAL",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+
+
+    {
+        id: 6,
+        location: "Chinchiná, Caldas",
+        title: "IMPLEMENTACIÓN DE ACCIONES DE RESTAURACIÓN ACTIVA Y CONSERVACIÓN EN AREAS DECLARADAS DE IMPORTANCIA ESTRATEGICA PARA LA CONSERVACIÓN DEL RECURSO HIDRICO",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/restauración.jpg"
+    },
+
+    {
+        id: 8,
+        location: "Puerto Guzmán, Putumayo",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES PARA FAMILIAS DE LA ZONA RURAL COMO MEDIDA DE CONSERVACIÓN AMBIENTAL EN EL MUNICIPIO DE PUERTO GUZMÁN, PUTUMAYO",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 9,
+        location: "Acevedo, Huila",
+        title: "DOTACION DE ESTUFAS ECOEFICIENTES PARA FAMILIAS EN ZONAS RURALES DEL MUNICIPIO DE ACEVEDO, DEPARTAMENTO DEL HUILA",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 10,
+        location: "Campamento, Antioquia",
+        title: "DOTACIÓN DE ESTUFAS ECOEFICIENTES PARA FAMILIAS EN ZONAS RURALES DEL MUNICIPIO DE CAMPAMENTO ANTIOQUIA",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 11,
+        location: "Chinchiná",
+        title: "IMPLEMENTACIÓN DE POZOS SÉPTICOS PARA LA CONSERVACIÓN PROTECCIÓN Y PRESERVACIÓN DEL SUELO Y LOS RECURSOS HÍDRICOS EN LA ZONA RURAL DEL MUNICIPIO DE CHINCHINÁ",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Agua y Saneamiento",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 12,
+        location: "Palestina, Huila",
+        title: "IMPLEMENTACIÓN ESTUFAS ECOEFICIENTES PARA FAMILIAS DE LA ZONA RURAL COMO MEDIDA DE CONSERVACIÓN AMBIENTAL EN EL MUNICIPIO DE PALESTINA DEPARTAMENTO DEL HUILA",
+        status: "Finalizado",
+        progress: "100%",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 13,
+        location: "Tópaga, Boyacá",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES PARA FAMILIAS DE LA ZONA RURAL COMO MEDIDA DE CONSERVACIÓN AMBIENTAL EN EL MUNICIPIO DE TÓPAGA DEPARTAMENTO DE BOYACÁ",
+        status: "En Ejecución",
+        progress: "En Ejecución",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 14,
+        location: "Isnos, Huila",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES PARA FAMILIAS DE LA ZONA RURAL COMO MEDIDA DE CONSERVACIÓN AMBIENTAL EN EL MUNICIPIO DE ISNOS, DEPARTAMENTO DEL HUILA",
+        status: "En Ejecución",
+        progress: "En Ejecución",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    },
+    {
+        id: 15,
+        location: "San Pedro de Cartago, Nariño",
+        title: "IMPLEMENTACIÓN DE ESTUFAS ECOEFICIENTES PARA FAMILIAS DE LA ZONA RURAL COMO MEDIDA DE CONSERVACIÓN AMBIENTAL EN EL MUNICIPIO SAN PEDRO DE CARTAGO, DEPARTAMENTO DE NARIÑO",
+        status: "En Ejecución",
+        progress: "En Ejecución",
+        category: "Medio Ambiente",
+        image: "/images/proyectos/cocinas.jpg"
+    }
+];

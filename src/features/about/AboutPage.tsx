@@ -5,57 +5,61 @@ import { motion } from "framer-motion";
 
 export function AboutPage() {
     return (
-        <div className="py-20 bg-background">
+        <div className="pt-32 pb-20 bg-slate-50">
             <Container>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="max-w-3xl mx-auto text-center mb-16"
-                >
-                    <h3 className="text-2xl font-bold text-secondary">
-                        En EME Consultorías y Asesorías, convertimos desafíos ambientales y sociales en proyectos de alto impacto que integran energía limpia, educación y gestión responsable de recursos.
-                    </h3>
-                </motion.div>
+                {/* Header Section */}
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl font-bold tracking-tight mb-6 text-secondary">Sobre Nosotros</h1>
+                    <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full" />
+                </div>
 
-                {/* <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+                {/* Main Content - Quiénes Somos */}
+                <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-slate-100 rounded-2xl h-64 md:h-96 w-full flex items-center justify-center text-slate-400"
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <span className="text-sm">Imagen Corporativa</span>
+                        <h2 className="text-2xl font-bold mb-6 text-slate-800">¿Quiénes somos?</h2>
+                        <div className="prose prose-lg text-slate-600 space-y-4">
+                            <p>
+                                <span className="font-bold text-emerald-600">EME Consultorías y Asesorías S.A.S.</span> es una empresa colombiana especializada en la formulación, diseño, ejecución y evaluación de proyectos en diversos sectores estratégicos, entre ellos energía, medio ambiente y educación, con un enfoque orientado al desarrollo sostenible y la transformación territorial.
+                            </p>
+                            <p>
+                                Nuestra labor se enfoca en la estructuración e implementación de iniciativas que promueven el uso eficiente y responsable de los recursos naturales, la adopción de energías limpias, la gestión ambiental integral y el fortalecimiento de capacidades institucionales y comunitarias, apoyadas en procesos educativos y soluciones tecnológicas.
+                            </p>
+                        </div>
                     </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
                     >
-                        <h2 className="text-2xl font-bold mb-4 text-secondary ">Nuestra Historia</h2>
-                        <p className="text-slate-600 mb-6 leading-relaxed">
-                            Fundada con la visión de transformar territorios, EME Consultorías se ha consolidado como un aliado estratégico para entidades públicas y privadas.
-                            Nos especializamos en la estructuración de iniciativas que no solo cumplen objetivos técnicos, sino que generan valor social y ambiental.
-                        </p>
-                        <p className="text-slate-600 leading-relaxed">
-                            Nuestro equipo multidisciplinario combina experiencia técnica con sensibilidad social para entregar soluciones robustas y sostenibles.
-                        </p>
+                        {/* Placeholder for an image - can be replaced with a real team or office photo */}
+                        <div className="absolute inset-0 bg-slate-200 flex items-center justify-center">
+                            {/* You can add an <Image /> here later */}
+                            <span className="text-slate-400 font-medium">Imagen Corporativa / Equipo</span>
+                        </div>
                     </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                    <div className="p-8 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-800/50">
-                        <h3 className="text-xl font-bold mb-3 text-emerald-800 dark:text-emerald-400">Misión</h3>
-                        <p className="text-slate-700">
-                            Formular, diseñar, ejecutar y evaluar proyectos de alto impacto que promuevan el desarrollo sostenible en los sectores de energía, medio ambiente y educación.
+                {/* Nuestro Equipo Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-slate-100"
+                >
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-2xl font-bold mb-6 text-slate-800">Nuestro Equipo</h2>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                            La empresa cuenta con un equipo técnico interdisciplinario conformado por profesionales en ingeniería, ciencias ambientales, educación y gestión de proyectos, lo que nos permite garantizar altos estándares de calidad, transparencia y cumplimiento en cada una de nuestras intervenciones.
                         </p>
                     </div>
-                    <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-2xl border border-blue-100 dark:border-blue-800/50">
-                        <h3 className="text-xl font-bold mb-3 text-blue-800 dark:text-blue-400">Visión</h3>
-                        <p className="text-slate-700">
-                            Ser reconocidos a nivel nacional como referentes en la transformación territorial a través de la innovación y la sostenibilidad integral.
-                        </p>
-                    </div>
-                </div> */}
+                </motion.div>
+
             </Container>
         </div>
     );

@@ -36,7 +36,7 @@ export function BlogPage() {
     return (
         <div className="py-20 bg-background">
             <Container>
-                <div className="mb-16">
+                <div className="mb-16 pt-10">
                     <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Blog y Noticias</h1>
                     <p className="text-lg text-slate-600 dark:text-slate-400">
                         Actualidad, reflexiones y novedades sobre nuestros proyectos y el sector.
@@ -57,7 +57,7 @@ export function BlogPage() {
                                         {post.category}
                                     </span>
                                 </div>
-                                <h2 className="text-xl font-bold mb-3 text-slate-900 dark:text-slate-50 line-clamp-2">
+                                <h2 className="text-xl font-bold mb-3 text-primary line-clamp-2">
                                     <Link href={`/blog/${post.id}`} className="hover:text-primary transition-colors">
                                         {post.title}
                                     </Link>

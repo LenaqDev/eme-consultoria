@@ -11,7 +11,7 @@ import { cn } from "@/shared/lib/utils";
 
 const navLinks = [
     { name: "Inicio", href: "/#home" },
-    { name: "Sobre Nosotros", href: "/#about" },
+    { name: "Sobre Nosotros", href: "/about" },
     { name: "Servicios", href: "/#services" },
     { name: "Proyectos", href: "/projects" },
     { name: "Blog", href: "/blog" },
@@ -30,7 +30,7 @@ export function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
-                            src="/Logo E.M.E.v2.png"
+                            src={pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "/Logo E.M.E..png" : "/Logo E.M.E.v2.png"}
                             alt="EME Consultorías Logo"
                             width={200}
                             height={10}
@@ -40,23 +40,30 @@ export function Navbar() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-6">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={cn(
-                                    "text-sm font-medium transition-colors hover:text-white/80",
-                                    pathname === link.href
-                                        ? "text-white font-bold"
-                                        : "text-white"
-                                )}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isProjectsPage = pathname === "/projects" || pathname === "/about" || pathname === "/blog";
+                            const linkColor = isProjectsPage ? "text-slate-800 hover:text-slate-600" : "text-white hover:text-white/80";
+                            const activeColor = isProjectsPage ? "text-secondary font-bold" : "text-white font-bold";
+
+                            return (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={cn(
+                                        "text-sm font-medium transition-colors",
+                                        pathname === link.href ? activeColor : linkColor
+                                    )}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
                         <Link
                             href="/#contact"
-                            className="text-sm font-medium transition-colors text-white hover:text-white/80"
+                            className={cn(
+                                "text-sm font-medium transition-colors",
+                                pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "text-slate-800 hover:text-slate-600" : "text-white hover:text-white/80"
+                            )}
                         >
                             Contacto
                         </Link>
@@ -64,7 +71,10 @@ export function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 text-foreground"
+                        className={cn(
+                            "md:hidden p-2",
+                            pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "text-slate-800" : "text-white"
+                        )}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
                     >
