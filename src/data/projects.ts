@@ -16,7 +16,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 4,
@@ -25,7 +25,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Educación",
-        image: "/images/proyectos/educacion.png"
+        image: "/images/project-images/educacion.png"
     },
 
     {
@@ -35,7 +35,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Infraestructura",
-        image: "/images/proyectos/cubierta2.jpeg"
+        image: "/images/project-images/cubierta2.jpeg"
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/restauracion.jpg"
+        image: "/images/project-images/restauracion.jpg"
     },
     {
         id: 3,
@@ -53,7 +53,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 2,
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
 
 
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/restauracion.jpg"
+        image: "/images/project-images/restauracion.jpg"
     },
 
     {
@@ -83,7 +83,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 9,
@@ -92,7 +92,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 10,
@@ -101,7 +101,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 11,
@@ -110,7 +110,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Agua y Saneamiento",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 12,
@@ -119,7 +119,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 13,
@@ -128,7 +128,7 @@ export const projects: Project[] = [
         status: "En Ejecución",
         progress: "En Ejecución",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 14,
@@ -137,7 +137,7 @@ export const projects: Project[] = [
         status: "En Ejecución",
         progress: "En Ejecución",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     },
     {
         id: 15,
@@ -146,6 +146,6 @@ export const projects: Project[] = [
         status: "En Ejecución",
         progress: "En Ejecución",
         category: "Medio Ambiente",
-        image: "/images/proyectos/cocinas.jpg"
+        image: "/images/project-images/cocinas.jpg"
     }
 ];
