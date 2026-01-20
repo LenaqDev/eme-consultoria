@@ -44,7 +44,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/restauración.jpg"
+        image: "/images/proyectos/restauracion.jpg"
     },
     {
         id: 3,
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         status: "Finalizado",
         progress: "100%",
         category: "Medio Ambiente",
-        image: "/images/proyectos/restauración.jpg"
+        image: "/images/proyectos/restauracion.jpg"
     },
 
     {
