@@ -12,20 +12,18 @@ export function AboutPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className="max-w-3xl mx-auto text-center mb-16"
                 >
-                    <h1 className="text-4xl font-bold tracking-tight mb-4 text-secondary">Sobre Nosotros</h1>
-                    <p className="text-lg text-slate-600">
-                        EME Consultorías y Asesorías S.A.S. es una empresa líder en la gestión integral de proyectos.
-                    </p>
+                    <h3 className="text-2xl font-bold text-secondary">
+                        En EME Consultorías y Asesorías, convertimos desafíos ambientales y sociales en proyectos de alto impacto que integran energía limpia, educación y gestión responsable de recursos.
+                    </h3>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+                {/* <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="bg-slate-100 rounded-2xl h-64 md:h-96 w-full flex items-center justify-center text-slate-400"
                     >
-                        {/* Placeholder for image */}
                         <span className="text-sm">Imagen Corporativa</span>
                     </motion.div>
                     <motion.div
@@ -57,7 +55,7 @@ export function AboutPage() {
                             Ser reconocidos a nivel nacional como referentes en la transformación territorial a través de la innovación y la sostenibilidad integral.
                         </p>
                     </div>
-                </div>
+                </div> */}
             </Container>
         </div>
     );
