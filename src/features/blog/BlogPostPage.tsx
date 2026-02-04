@@ -10,9 +10,9 @@ export function BlogPostPage() {
     const { id } = useParams();
 
     return (
-        <article className="py-20 bg-background">
+        <article className="pt-32 pb-20 bg-background">
             <Container className="max-w-3xl">
-                <Button variant="ghost" asChild className="mb-8 pl-0 hover:bg-transparent hover:text-primary">
+                <Button variant="ghost" asChild className="mb-8 pl-0 hover:bg-transparent hover:text-primary relative z-10">
                     <Link href="/blog">
                         <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Blog
                     </Link>
@@ -24,17 +24,17 @@ export function BlogPostPage() {
                         <span className="flex items-center gap-1"><User className="h-4 w-4" /> Admin</span>
                         <span className="flex items-center gap-1"><Tag className="h-4 w-4" /> Energía</span>
                     </div>
-                    <h1 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-slate-50 mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold text-primary mb-6">
                         La Importancia de las Energías Renovables en Colombia (Post #{id})
                     </h1>
-                    <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="text-xl text-slate-600 leading-relaxed">
                         Colombia tiene un potencial inmenso para liderar la transición energética en la región. En este artículo exploramos las claves de este proceso.
                     </p>
                 </header>
 
                 <div className="h-[400px] bg-slate-200  rounded-2xl mb-12 w-full" />
 
-                <div className="prose prose-lg dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
+                <div className="prose prose-lg max-w-none text-slate-700">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
