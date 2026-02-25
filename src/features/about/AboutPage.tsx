@@ -37,11 +37,11 @@ export function AboutPage() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
                     >
-                        {/* Placeholder for an image - can be replaced with a real team or office photo */}
-                        <div className="absolute inset-0 bg-slate-200 flex items-center justify-center">
-                            {/* You can add an <Image /> here later */}
-                            <span className="text-slate-400 font-medium">Imagen Corporativa / Equipo</span>
-                        </div>
+                        <img 
+                            src="/images/about.png" 
+                            alt="About Team" 
+                            className="absolute inset-0 w-full h-full object-cover" 
+                        />
                     </motion.div>
                 </div>
 
