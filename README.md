@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EME Consultorías | Sitio Web Corporativo
 
-## Getting Started
+Sitio web oficial de **EME Consultorías y Asesorías S.A.S.**, empresa colombiana especializada en formulación, diseño, ejecución y evaluación de proyectos sostenibles en energía, medio ambiente y educación.
 
-First, run the development server:
+**URL:** [emeconsultorias.com](https://emeconsultorias.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Sobre el proyecto
+
+La web presenta los sectores de acción de la empresa, su portafolio de proyectos, equipo y canales de contacto. Incluye:
+
+- **Inicio:** Hero, sectores de acción, proyectos destacados y formulario de contacto
+- **Sobre Nosotros:** Quiénes somos y equipo técnico
+- **Servicios:** Detalle de Energía, Medio Ambiente y Educación con imágenes y descripciones
+- **Proyectos:** Galería de proyectos ejecutados (estufas ecoeficientes, reforestación, educación TIC, etc.)
+- **Blog:** Publicaciones y noticias
+- **Contacto:** Formulario con validación, reCAPTCHA v3 y envío de emails vía Resend
+
+---
+
+## Stack tecnológico
+
+| Categoría | Tecnología |
+|-----------|------------|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript |
+| **UI / Estilos** | Tailwind CSS 4 |
+| **Animaciones** | Framer Motion |
+| **Componentes** | Radix UI, Lucide React |
+| **Emails** | Resend |
+| **Seguridad** | Google reCAPTCHA v3 |
+| **Analytics** | Google Tag Manager, GA4 |
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+├── app/                    # App Router (rutas, layout, API)
+│   ├── api/contact/        # API de formulario de contacto
+│   ├── about/
+│   ├── blog/
+│   ├── projects/
+│   └── services/
+├── features/               # Páginas y secciones por feature
+│   ├── home/
+│   ├── about/
+│   ├── services/
+│   ├── contact/
+│   └── blog/
+├── shared/
+│   ├── components/         # Navbar, Footer, Button, Container
+│   └── lib/                # Utilidades
+└── data/                   # Datos estáticos (proyectos, servicios)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Desarrollo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Requisitos
 
-## Learn More
+- [Bun](https://bun.sh) (recomendado) o Node.js 18+
 
-To learn more about Next.js, take a look at the following resources:
+### Instalación
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+bun install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Variables de entorno
 
-## Deploy on Vercel
+Copia `.env.example` a `.env.local` y configura:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+# Resend - envío de emails
+RESEND_API_KEY=re_xxxx
+CONTACT_EMAIL=gerencia@emeconsultorias.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# reCAPTCHA v3
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lxxxx
+RECAPTCHA_SECRET_KEY=6Lxxxx
+```
+
+**Modo desarrollo:** Sin variables configuradas, el formulario de contacto funciona en modo simulado (no envía emails reales).
+
+### Comandos
+
+```bash
+bun run dev    # Servidor de desarrollo (http://localhost:3000)
+bun run build  # Build de producción
+bun run start  # Servidor de producción
+bun run lint   # Linter
+```
+
+---
+
+## Mejoras implementadas
+
+- **SEO:** Metadata, Open Graph, JSON-LD, canonical URLs
+- **Accesibilidad:** Contraste de texto, modo claro forzado
+- **Rendimiento:** Next.js Image, optimización de fuentes
+- **UX:** Animaciones con Framer Motion, feedback visual en formulario
+- **Seguridad:** reCAPTCHA v3, validación de campos
+- **Modo desarrollo:** Pruebas del formulario sin API keys
+
+---
+
+## Despliegue
+
+Compatible con Vercel, Netlify y cualquier plataforma que soporte Next.js. Configura las variables de entorno en el panel de tu proveedor.
+
+---
+
+## Licencia
+
+Proyecto privado de EME Consultorías y Asesorías S.A.S.
