@@ -36,7 +36,7 @@ export function Footer() {
                         <h3 className="font-semibold mb-4 text-white">Menú</h3>
                         <ul className="space-y-3 text-sm text-white">
                             <li><Link href="/#about" className="hover:text-white-500 transition-colors">Sobre Nosotros</Link></li>
-                            <li><Link href="/#services" className="hover:text-white-500 transition-colors">Servicios</Link></li>
+                            <li><Link href="/services" className="hover:text-white-500 transition-colors">Servicios</Link></li>
                             <li><Link href="/projects" className="hover:text-white-500 transition-colors">Proyectos</Link></li>
                             <li><Link href="/blog" className="hover:text-white-500 transition-colors">Blog</Link></li>
                         </ul>

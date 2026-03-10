@@ -114,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className="light" suppressHydrationWarning>
       <head>
         {/* Google Tag Manager */}
         <Script

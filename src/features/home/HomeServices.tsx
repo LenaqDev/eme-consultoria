@@ -2,26 +2,28 @@
 
 import { Container } from "@/shared/components/Container";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const services = [
     {
         icon: "/icons/energia-limpia-icon.svg",
         title: "Energía Limpia",
         description: "Desarrollamos proyectos de energías renovables enfocados en la eficiencia energética, implementando sistemas fotovoltaicos que reducen costos y promueven la sostenibilidad.",
-        //color: "bg-amber-100 text-amber-600",
+        href: "/services#energia",
     },
     {
         icon: "/icons/service-1.svg",
         title: "Medio Ambiente",
         description: "Ejecutamos iniciativas de conservación ambiental como estufas ecoeficientes, pozos sépticos, reforestaciones y diferentes acciones de restauración, aportando al bienestar de las comunidades.",
-        //color: "bg-emerald-100 text-emerald-600",
+        href: "/services#medio-ambiente",
     },
     {
         icon: "/icons/service-2.svg",
         title: "Educación",
         description: "Impulsamos la transformación educativa mediante la dotación tecnológica, la innovación pedagógica y la formación docente, desarrollando proyectos dirigidos a sedes educativas públicas que fortalecen las competencias digitales en entornos escolares",
-        //color: "bg-blue-100 text-blue-600",
+        href: "/services#educacion",
     },
 ];
 
@@ -48,32 +50,41 @@ export function HomeServices() {
                             whileHover="hover"
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="group relative flex flex-col items-center justify-center text-center overflow-hidden rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl h-full"
+                            className="group relative flex flex-col items-center justify-between text-center overflow-hidden rounded-2xl bg-white p-8 shadow-md transition-shadow hover:shadow-xl h-full"
                         >
-                            <motion.div
-                                variants={{
-                                    hover: {
-                                        scale: 1.1,
-                                        rotate: -5,
-                                        transition: { type: "spring", stiffness: 400, damping: 10 }
-                                    }
-                                }}
-                                className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl"
+                            <div>
+                                <motion.div
+                                    variants={{
+                                        hover: {
+                                            scale: 1.1,
+                                            rotate: -5,
+                                            transition: { type: "spring", stiffness: 400, damping: 10 }
+                                        }
+                                    }}
+                                    className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl"
+                                >
+                                    <Image
+                                        src={service.icon}
+                                        alt={service.title}
+                                        width={64}
+                                        height={64}
+                                        className="h-16 w-16 object-contain"
+                                    />
+                                </motion.div>
+                                <h3 className="mb-3 text-xl font-bold text-slate-900">
+                                    {service.title}
+                                </h3>
+                                <p className="mb-6 text-slate-600">
+                                    {service.description}
+                                </p>
+                            </div>
+                            <Link
+                                href={service.href}
+                                className="inline-flex items-center gap-2 text-secondary font-semibold hover:text-primary transition-colors group/link"
                             >
-                                <Image
-                                    src={service.icon}
-                                    alt={service.title}
-                                    width={64}
-                                    height={64}
-                                    className="h-16 w-16 object-contain "
-                                />
-                            </motion.div>
-                            <h3 className="mb-3 text-xl font-bold text-slate-900">
-                                {service.title}
-                            </h3>
-                            <p className="mb-6 text-slate-600">
-                                {service.description}
-                            </p>
+                                Conocer más
+                                <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
