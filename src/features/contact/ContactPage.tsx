@@ -144,8 +144,11 @@ export function ContactPage() {
         setResponseMessage("");
 
         try {
-            // Execute reCAPTCHA
-            const recaptchaToken = await executeRecaptcha("contact_form");
+            // Execute reCAPTCHA (en desarrollo sin key: usar dev-bypass para pruebas)
+            let recaptchaToken = await executeRecaptcha("contact_form");
+            if (!recaptchaToken && !RECAPTCHA_SITE_KEY && process.env.NODE_ENV === "development") {
+                recaptchaToken = "dev-bypass";
+            }
 
             if (!recaptchaToken && RECAPTCHA_SITE_KEY) {
                 setSubmitStatus("error");

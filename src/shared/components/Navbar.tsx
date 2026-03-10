@@ -12,7 +12,7 @@ import { cn } from "@/shared/lib/utils";
 const navLinks = [
     { name: "Inicio", href: "/#home" },
     { name: "Sobre Nosotros", href: "/about" },
-    { name: "Servicios", href: "/#services" },
+    { name: "Servicios", href: "/services" },
     { name: "Proyectos", href: "/projects" },
     { name: "Blog", href: "/blog" },
 ];
@@ -30,7 +30,7 @@ export function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
-                            src={pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "/Logo E.M.E..png" : "/Logo E.M.E.v2.png"}
+                            src={pathname === "/projects" || pathname === "/about" || pathname === "/blog" || pathname === "/services" ? "/Logo E.M.E..png" : "/Logo E.M.E.v2.png"}
                             alt="EME Consultorías Logo"
                             width={200}
                             height={10}
@@ -41,7 +41,7 @@ export function Navbar() {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-6">
                         {navLinks.map((link) => {
-                            const isProjectsPage = pathname === "/projects" || pathname === "/about" || pathname === "/blog";
+                            const isProjectsPage = pathname === "/projects" || pathname === "/about" || pathname === "/blog" || pathname === "/services";
                             const linkColor = isProjectsPage ? "text-slate-800 hover:text-slate-600" : "text-white hover:text-white/80";
                             const activeColor = isProjectsPage ? "text-secondary font-bold" : "text-white font-bold";
 
@@ -62,7 +62,7 @@ export function Navbar() {
                             href="/#contact"
                             className={cn(
                                 "text-sm font-medium transition-colors",
-                                pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "text-slate-800 hover:text-slate-600" : "text-white hover:text-white/80"
+                                pathname === "/projects" || pathname === "/about" || pathname === "/blog" || pathname === "/services" ? "text-slate-800 hover:text-slate-600" : "text-white hover:text-white/80"
                             )}
                         >
                             Contacto
@@ -73,7 +73,7 @@ export function Navbar() {
                     <button
                         className={cn(
                             "md:hidden p-2",
-                            pathname === "/projects" || pathname === "/about" || pathname === "/blog" ? "text-slate-800" : "text-white"
+                            pathname === "/projects" || pathname === "/about" || pathname === "/blog" || pathname === "/services" ? "text-slate-800" : "text-white"
                         )}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"

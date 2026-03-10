@@ -1,10 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const isDev = process.env.NODE_ENV === "development";
+
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return null;
+  return new Resend(key);
+}
 
 // Validate reCAPTCHA token with Google
 async function verifyRecaptcha(token: string): Promise<boolean> {
+  // En desarrollo sin keys: permitir bypass para pruebas
+  if (isDev && !process.env.RECAPTCHA_SECRET_KEY && token === "dev-bypass") {
+    return true;
+  }
+
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   if (!secretKey) {
@@ -56,14 +67,16 @@ export async function POST(request: NextRequest) {
     }
 
     // --- reCAPTCHA verification ---
-    if (!recaptchaToken) {
+    // En desarrollo sin RECAPTCHA_SITE_KEY: permitir null y usar dev-bypass
+    const tokenToVerify = recaptchaToken ?? (isDev && !process.env.RECAPTCHA_SECRET_KEY ? "dev-bypass" : null);
+    if (!tokenToVerify) {
       return NextResponse.json(
         { error: "Verificación de seguridad fallida. Intenta de nuevo." },
         { status: 400 }
       );
     }
 
-    const isHuman = await verifyRecaptcha(recaptchaToken);
+    const isHuman = await verifyRecaptcha(tokenToVerify);
     if (!isHuman) {
       return NextResponse.json(
         {
@@ -83,6 +96,28 @@ export async function POST(request: NextRequest) {
     const subjectText = subjectMap[subject] || subject;
 
     // --- Send email via Resend ---
+    // En desarrollo sin RESEND_API_KEY: simular envío exitoso y loguear
+    if (isDev && !process.env.RESEND_API_KEY) {
+      console.log("[DEV] Contact form submission (Resend not configured):", {
+        name,
+        email,
+        subject: subjectText,
+        message: message.slice(0, 100) + "...",
+      });
+      return NextResponse.json(
+        { message: "Mensaje enviado exitosamente. (Modo desarrollo: no se envió email real)" },
+        { status: 200 }
+      );
+    }
+
+    const resend = getResend();
+    if (!resend) {
+      return NextResponse.json(
+        { error: "Servicio de email no configurado. Contacta al administrador." },
+        { status: 503 }
+      );
+    }
+
     const { error } = await resend.emails.send({
       from: "EME Consultorías <onboarding@resend.dev>",
       to: [process.env.CONTACT_EMAIL || "gerencia@emeconsultorias.com"],
